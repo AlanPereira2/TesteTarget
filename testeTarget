@@ -1,0 +1,22 @@
+public class FibonacciChecker {
+
+    public static void main(String[] args) {
+        int number = 21;
+        isFibonacci(number);
+    }
+
+    public static void isFibonacci(int n) {
+        int num1 = 5 * n * n + 4;
+        int num2 = 5 * n * n - 4;
+
+        if (isPerfectSquare(num1) || isPerfectSquare(num2)) {
+            System.out.println(n + " pertence à sequência de Fibonacci.");
+        } else {
+            System.out.println(n + " não pertence à sequência de Fibonacci.");
+        }
+    }
+
+    private static boolean isPerfectSquare(int x) {
+        int s = (int) Math.sqrt(x);
+        return (s * s == x);
+    }
