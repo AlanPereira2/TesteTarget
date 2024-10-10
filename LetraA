@@ -1,0 +1,19 @@
+public static void main(String[] args) {
+        String texto = "A alegria contagia";
+        int contador = contarAs(texto);
+        System.out.println("Número de 'a' na string: " + contador);
+    }
+
+    public static int contarAs(String texto) {
+        int contador = 0;
+        // Converte a string toda para minúscula para contar 'a' e 'A' da mesma forma
+        texto = texto.toLowerCase();
+        
+        // Percorre a string e conta os 'a'
+        for (int i = 0; i < texto.length(); i++) {
+            if (texto.charAt(i) == 'a') {
+                contador++;
+            }
+        }
+        return contador;
+    }
